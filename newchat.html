@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta name="description" content="description">
+		<meta name="keywords" content="kw">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Support</title>
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/template.css">
+	</head>
+
+	<body>
+		<div class="main">
+			<aside class="aside">
+				<div class="aside-section">
+					<ul>
+						<li class="aside-item" id="dialogue-menu-open"><div class="unread">
+							<a href="#" onclick="document.getElementById('chat-menu').style.display='block'">
+								<div class="icon"><img src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij4KICAgIDxnIGZpbGw9IiMwRkMxOTgiPgogICAgICAgIDxwYXRoIGQ9Ik00IDJoMTFjMS4xMDUgMCAyIC44OTUgMiAydjhjMCAxLjEwNS0uODk1IDItMiAySDdsLTUgNFY0YzAtMS4xMDUuODk1LTIgMi0yem0zIDdjLS41NTIgMC0xIC40NDgtMSAxcy40NDggMSAxIDFoNGMuNTUyIDAgMS0uNDQ4IDEtMXMtLjQ0OC0xLTEtMUg3em0wLTRjLS41NTIgMC0xIC40NDgtMSAxcy40NDggMSAxIDFoNWMuNTUyIDAgMS0uNDQ4IDEtMXMtLjQ0OC0xLTEtMUg3eiIvPgogICAgICAgIDxwYXRoIGQ9Ik0xOSA2djEwSDd2MWMwIDEuMTA1Ljg5NSAyIDIgMmg4bDUgNFY4YzAtMS4xMDUtLjg5NS0yLTItMmgtMXoiLz4KICAgIDwvZz4KPC9zdmc+Cg==" alt="" class="img"></div>
+								<div class="text"><span>Dialogues</span></div>
+								<div class="unread-info"></div>
+							</a>
+						</div>
+					</li>
+					<li class="aside-item" id="description-menu-open"><div class="unread">
+							<a href="#" onclick="document.getElementById('chat-description').style.display='block'">
+								<div class="icon"><img class="red-hover" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KICAgIDwhLS0gR2VuZXJhdG9yOiBza2V0Y2h0b29sIDUzLjEgKDcyNjMxKSAtIGh0dHBzOi8vc2tldGNoYXBwLmNvbSAtLT4KICAgIDx0aXRsZT5BMjdENTkwRS0wMTZGLTRDRUEtODU3Ni1GREQzNDJDRUVENDY8L3RpdGxlPgogICAgPGRlc2M+Q3JlYXRlZCB3aXRoIHNrZXRjaHRvb2wuPC9kZXNjPgogICAgPGcgaWQ9IlN5bWJvbHMiIHN0cm9rZT0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxIiBmaWxsPSJub25lIiBmaWxsLXJ1bGU9ImV2ZW5vZGQiPgogICAgICAgIDxnIGlkPSJpY29uL21lbnUtbGVmdC90ZWFtLy1taW4tZ3JleSIgZmlsbD0iI0I5QkFCQiIgZmlsbC1ydWxlPSJub256ZXJvIj4KICAgICAgICAgICAgPGcgaWQ9Imljb24vbmF2L3RlYW0iIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMuMDAwMDAwLCA2LjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPHBhdGggZD0iTTAsOS44NTcxNDI4NiBMMCwxMSBDNi43NjM1Mzc1MWUtMTcsMTEuNTUyMjg0NyAwLjQ0NzcxNTI1LDEyIDEsMTIgTDkuMjg1NzE0MjksMTIgQzkuODM3OTk5MDQsMTIgMTAuMjg1NzE0MywxMS41NTIyODQ3IDEwLjI4NTcxNDMsMTEgTDEwLjI4NTcxNDMsOS44NTcxNDI4NiBDMTAuMjg1NzE0Myw3Ljg2IDYuODU0NjkzODgsNi44NTcxNDI4NiA1LjE0Mjg1NzE0LDYuODU3MTQyODYgQzMuNDMxMDIwNDEsNi44NTcxNDI4NiAwLDcuODYgMCw5Ljg1NzE0Mjg2IFogTTcuNzE0Mjg1NzEsMi41NzE0Mjg1NyBDNy43MTQyODU3MSwxLjE1MTI2Nzc5IDYuNTYzMDE3OTMsMCA1LjE0Mjg1NzE0LDAgQzMuNzIyNjk2MzYsMCAyLjU3MTQyODU3LDEuMTUxMjY3NzkgMi41NzE0Mjg1NywyLjU3MTQyODU3IEMyLjU3MTQyODU3LDMuOTkxNTg5MzYgMy43MjI2OTYzNiw1LjE0Mjg1NzE0IDUuMTQyODU3MTQsNS4xNDI4NTcxNCBDNi41NjMwMTc5Myw1LjE0Mjg1NzE0IDcuNzE0Mjg1NzEsMy45OTE1ODkzNiA3LjcxNDI4NTcxLDIuNTcxNDI4NTcgWiIgaWQ9IlNoYXBlIj48L3BhdGg+CiAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMTEuMzY4ODg5Nyw2Ljg5NDcwMTc0IEMxMS41OTU5Mzc0LDYuODY5NjY2NDcgMTEuODA4NzAzMiw2Ljg1NzE0Mjg2IDEyLDYuODU3MTQyODYgQzEzLjcxMTgzNjcsNi44NTcxNDI4NiAxNy4xNDI4NTcxLDcuODYgMTcuMTQyODU3MSw5Ljg1NzE0Mjg2IEwxNy4xNDI4NTcxLDExIEMxNy4xNDI4NTcxLDExLjU1MjI4NDcgMTYuNjk1MTQxOSwxMiAxNi4xNDI4NTcxLDEyIEwxMi44NTcxNDI5LDEyIEwxMi44NTcxNDI5LDEwLjI4NTcxNDMgQzEyLjg1NzE0MjksOC45MjQwNDgwOSAxMi4yNTkwMzc2LDcuNzkzNDg0MTggMTEuMzY4ODg5Nyw2Ljg5NDcwMTc0IFogTTE0LjU3MTQyODYsMi41NzE0Mjg1NyBDMTQuNTcxNDI4NiwzLjk5MTU4OTM2IDEzLjQyMDE2MDgsNS4xNDI4NTcxNCAxMiw1LjE0Mjg1NzE0IEMxMC41Nzk4MzkyLDUuMTQyODU3MTQgOS40Mjg1NzE0MywzLjk5MTU4OTM2IDkuNDI4NTcxNDMsMi41NzE0Mjg1NyBDOS40Mjg1NzE0MywxLjE1MTI2Nzc5IDEwLjU3OTgzOTIsMCAxMiwwIEMxMy40MjAxNjA4LDAgMTQuNTcxNDI4NiwxLjE1MTI2Nzc5IDE0LjU3MTQyODYsMi41NzE0Mjg1NyBaIiBpZD0iQ29tYmluZWQtU2hhcGUiPjwvcGF0aD4KICAgICAgICAgICAgPC9nPgogICAgICAgIDwvZz4KICAgIDwvZz4KPC9zdmc+" alt="" class="img"></div>
+								<div class="text"><span>Client</span></div>
+								<div class="unread-info"></div>
+							</a>
+						</div>
+					</li>
+					<li class="aside-item"><div class="unread">
+							<a href="#">
+								<div class="icon"><img class="orange-hover" src="data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0iVVRGLTgiPz4KPHN2ZyB3aWR0aD0iMjRweCIgaGVpZ2h0PSIyNHB4IiB2aWV3Qm94PSIwIDAgMjQgMjQiIHZlcnNpb249IjEuMSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIiB4bWxuczp4bGluaz0iaHR0cDovL3d3dy53My5vcmcvMTk5OS94bGluayI+CiAgICA8IS0tIEdlbmVyYXRvcjogc2tldGNodG9vbCA1My4xICg3MjYzMSkgLSBodHRwczovL3NrZXRjaGFwcC5jb20gLS0+CiAgICA8dGl0bGU+M0Y1MTI2OUItNkIzMS00ODFCLUIyNzAtODJCMUVDNDc3RTNDPC90aXRsZT4KICAgIDxkZXNjPkNyZWF0ZWQgd2l0aCBza2V0Y2h0b29sLjwvZGVzYz4KICAgIDxkZWZzPgogICAgICAgIDxwYXRoIGQ9Ik0yLDAgTDE2LDAgQzE3LjEwNDU2OTUsLTIuMDI5MDYxMjVlLTE2IDE4LDAuODk1NDMwNSAxOCwyIEwxOCwxMiBDMTgsMTMuMTA0NTY5NSAxNy4xMDQ1Njk1LDE0IDE2LDE0IEwyLDE0IEMwLjg5NTQzMDUsMTQgMS4zNTI3MDc1ZS0xNiwxMy4xMDQ1Njk1IDAsMTIgTDAsMiBDLTEuMzUyNzA3NWUtMTYsMC44OTU0MzA1IDAuODk1NDMwNSwyLjAyOTA2MTI1ZS0xNiAyLDAgWiBNOSw3IEMxMC4xMDQ1Njk1LDcgMTEsNi4xMDQ1Njk1IDExLDUgQzExLDMuODk1NDMwNSAxMC4xMDQ1Njk1LDMgOSwzIEM3Ljg5NTQzMDUsMyA3LDMuODk1NDMwNSA3LDUgQzcsNi4xMDQ1Njk1IDcuODk1NDMwNSw3IDksNyBaIE01Ljc0MTA0Nzc4LDEwLjk4MTIwMTIgTDEyLjIyNDc4NjksMTAuOTgxMjAxMiBDMTEuODI3MjE5MSw4LjMyNzA2NzA2IDEwLjc0ODcxMDYsNyA4Ljk4OTI2MTUyLDcgQzcuMjI5ODEyNDEsNyA2LjE0NzA3NDUsOC4zMjcwNjcwNiA1Ljc0MTA0Nzc4LDEwLjk4MTIwMTIgWiBNMiwxNSBMMTYsMTUgQzE2LDE2LjEwNDU2OTUgMTUuMTA0NTY5NSwxNyAxNCwxNyBMNCwxNyBDMi44OTU0MzA1LDE3IDIsMTYuMTA0NTY5NSAyLDE1IFogTTQsMTggTDE0LDE4IEMxNCwxOS4xMDQ1Njk1IDEzLjEwNDU2OTUsMjAgMTIsMjAgTDYsMjAgQzQuODk1NDMwNSwyMCA0LDE5LjEwNDU2OTUgNCwxOCBaIiBpZD0icGF0aC0xIj48L3BhdGg+CiAgICA8L2RlZnM+CiAgICA8ZyBpZD0iU3ltYm9scyIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIGZpbGw9Im5vbmUiIGZpbGwtcnVsZT0iZXZlbm9kZCI+CiAgICAgICAgPGcgaWQ9Imljb24vbWVudS1sZWZ0L2NvbnRhY3RzLy1taW4tZ3JleSI+CiAgICAgICAgICAgIDxnIGlkPSJpY29uL25hdi9jb250YWN0cy8tLXNvbGlkLWdyZXkiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDMuMDAwMDAwLCAyLjAwMDAwMCkiPgogICAgICAgICAgICAgICAgPG1hc2sgaWQ9Im1hc2stMiIgZmlsbD0id2hpdGUiPgogICAgICAgICAgICAgICAgICAgIDx1c2UgeGxpbms6aHJlZj0iI3BhdGgtMSI+PC91c2U+CiAgICAgICAgICAgICAgICA8L21hc2s+CiAgICAgICAgICAgICAgICA8dXNlIGlkPSJNYXNrIiBmaWxsPSIjQjlCQUJCIiBmaWxsLXJ1bGU9Im5vbnplcm8iIHhsaW5rOmhyZWY9IiNwYXRoLTEiPjwvdXNlPgogICAgICAgICAgICA8L2c+CiAgICAgICAgPC9nPgogICAgPC9nPgo8L3N2Zz4=" alt="" class="img"></div>
+								<div class="text"><span>CRM</span></div>
+								<div class="unread-info"></div>
+							</a>
+						</div>
+					</li>
+					<li class="aside-item"><div class="unread">
+							<a href="#">
+								<div class="icon"><img class="blue-hover" src="data:image/svg+xml;base64,PHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgeG1sbnM6eGxpbms9Imh0dHA6Ly93d3cudzMub3JnLzE5OTkveGxpbmsiIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCwwLDI1NiwyNTYiPjxnIGZpbGw9IiNiOWJhYmIiIGZpbGwtcnVsZT0iZXZlbm9kZCIgc3Ryb2tlPSJub25lIiBzdHJva2Utd2lkdGg9IjEiIHN0cm9rZS1saW5lY2FwPSJidXR0IiBzdHJva2UtbGluZWpvaW49Im1pdGVyIiBzdHJva2UtbWl0ZXJsaW1pdD0iMTAiIHN0cm9rZS1kYXNoYXJyYXk9IiIgc3Ryb2tlLWRhc2hvZmZzZXQ9IjAiIGZvbnQtZmFtaWx5PSJub25lIiBmb250LXdlaWdodD0ibm9uZSIgZm9udC1zaXplPSJub25lIiB0ZXh0LWFuY2hvcj0ibm9uZSIgc3R5bGU9Im1peC1ibGVuZC1tb2RlOiBub3JtYWwiPjxnIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAsLTAuMDAxMDQpIHNjYWxlKDEwLjY2NjY3LDEwLjY2NjY3KSI+PHBhdGggZD0iTTIuMjUsMi4yNWMtMC40MTQyMSwwIC0wLjc1LDAuMzM1NzkgLTAuNzUsMC43NWMwLDAuNDE0MjEgMC4zMzU3OSwwLjc1IDAuNzUsMC43NWgwLjc1djEwLjVjMCwxLjY1NjkgMS4zNDMxNSwzIDMsM2gxLjIwOTQzbC0xLjE3MDk0LDMuNTEyOGMtMC4xMzA5OSwwLjM5MyAwLjA4MTM4LDAuODE3NyAwLjQ3NDM0LDAuOTQ4N2MwLjM5Mjk2LDAuMTMxIDAuODE3NywtMC4wODE0IDAuOTQ4NjgsLTAuNDc0M2wwLjMyOTA2LC0wLjk4NzJoOC40MTg4M2wwLjMyOTEsMC45ODcyYzAuMTMxLDAuMzkyOSAwLjU1NTcsMC42MDUzIDAuOTQ4NywwLjQ3NDNjMC4zOTI5LC0wLjEzMSAwLjYwNTMsLTAuNTU1NyAwLjQ3NDMsLTAuOTQ4N2wtMS4xNzA5LC0zLjUxMjhoMS4yMDk0YzEuNjU2OSwwIDMsLTEuMzQzMSAzLC0zdi0xMC41aDAuNzVjMC40MTQyLDAgMC43NSwtMC4zMzU3OSAwLjc1LC0wLjc1YzAsLTAuNDE0MjEgLTAuMzM1OCwtMC43NSAtMC43NSwtMC43NXpNOC43OTA1NywxNy4yNWg2LjQxODgzbDAuNSwxLjVoLTcuNDE4ODN6TTE2Ljg3NTUsOC4yNTQ2N2MwLjM1ODYsLTAuMjA3NCAwLjQ4MTEsLTAuNjY2MiAwLjI3MzcsLTEuMDI0NzVjLTAuMjA3NCwtMC4zNTg1NCAtMC42NjYyLC0wLjQ4MTA2IC0xLjAyNDcsLTAuMjczNjZjLTEuMzY2OCwwLjc5MDYyIC0yLjU3MjgsMS44Mjc0NSAtMy41NTc4LDMuMDQ5ODRsLTEuNTM2NCwtMS41MzYzNWMtMC4yOTI5LC0wLjI5Mjg5IC0wLjc2NzcsLTAuMjkyODkgLTEuMDYwNjMsMGwtMywzLjAwMDA1Yy0wLjI5Mjg5LDAuMjkyOCAtMC4yOTI4OSwwLjc2NzcgMCwxLjA2MDZjMC4yOTI4OSwwLjI5MjkgMC43Njc3NywwLjI5MjkgMS4wNjA2NiwwbDIuNDY5NjcsLTIuNDY5N2wxLjYxNzMsMS42MTczYzAuMTU2OSwwLjE1NyAwLjM3NTQsMC4yMzYzIDAuNTk2NSwwLjIxNjdjMC4yMjExLC0wLjAxOTYgMC40MjIyLC0wLjEzNjEgMC41NDkxLC0wLjMxODJjMC45NDQxLC0xLjM1NDggMi4xNzg1LC0yLjQ5MjIyIDMuNjEyNiwtMy4zMjE4M3oiPjwvcGF0aD48L2c+PC9nPjwvc3ZnPg==" alt="" class="img"></div>
+								<div class="text"><span>Marketing</span></div>
+								<div class="unread-info"></div>
+							</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</aside>
+		<section class="chat flex-row">
+			<div class="chat-menu" id="chat-menu">
+				<button class="close-button" id="close-button-menu" onclick="document.getElementById('chat-menu').style.display='none'"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(2%202)%22%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFF%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212.75%22%20stroke%3D%22%23222D38%22%20stroke-width%3D%221.5%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22%23222D38%22%20opacity%3D%221%22%20transform%3D%22translate(6%206)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22rotate(45%206.24%206.01)%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22scale(-1%201)%20rotate(45%200%20-9.058)%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img"></button>
+				<div class="chat-menu-header"><h2>Dialogues</h2></div>
+				<div class="chat-menu-submenu">
+					<div>
+						<ul class="submenu-list">
+							<li class="submenu-item">
+								<div class="unread active">
+									<a href="#">Inbox</a>
+								</div>
+							</li>
+							<li class="submenu-item">
+								<div class="">
+									<a href="#">My</a>
+								</div>
+							</li>
+							<li class="submenu-item">
+								<div class="">
+									<a href="#">All</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+					<div class="submenu-search">
+							<div class="submenu-search-icon">
+								<svg class="img" xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="100" height="100" viewBox="0 0 48 48">
+									<path d="M 20.5 6 C 12.509634 6 6 12.50964 6 20.5 C 6 28.49036 12.509634 35 20.5 35 C 23.956359 35 27.133709 33.779044 29.628906 31.75 L 39.439453 41.560547 A 1.50015 1.50015 0 1 0 41.560547 39.439453 L 31.75 29.628906 C 33.779044 27.133709 35 23.956357 35 20.5 C 35 12.50964 28.490366 6 20.5 6 z M 20.5 9 C 26.869047 9 32 14.130957 32 20.5 C 32 23.602612 30.776198 26.405717 28.791016 28.470703 A 1.50015 1.50015 0 0 0 28.470703 28.791016 C 26.405717 30.776199 23.602614 32 20.5 32 C 14.130953 32 9 26.869043 9 20.5 C 9 14.130957 14.130953 9 20.5 9 z"></path>
+								</svg>
+							</div>
+							<input type="text" class="submenu-search-input" placeholder="Search">
+						</div>
+					</div>
+					<div class="dialogue-list">
+						<ul>
+							<li class="dialogue-item">
+								<a href="#" class="dialogue-card active unread">
+									<div class="card-icons">
+										<div class="avatar"><img src="https://www.thispersondoesnotexist.com/" alt="" class="img"></div>
+										<div class="unread-info"></div>
+									</div>
+									<div class="dialogue-data"><h3>{{ info.ticket_username }}</h3><span>{{ m.text }}</span></div>
+									<div class="time js-time">{{ formatDate(m.createdAt) }}</div>
+								</a>
+							</li>
+							<li class="dialogue-item">
+								<a href="#" class="dialogue-card unread">
+									<div class="card-icons">
+										<div class="avatar"><img src="https://www.thispersondoesnotexist.com/" alt="" class="img"></div>
+										<div class="unread-info"></div>
+									</div>
+									<div class="dialogue-data"><h3>Тестовый клиент</h3><span>Сообщение</span></div>
+									<div class="time js-time"></div>
+								</a>
+							</li>
+							<li class="dialogue-item">
+								<a href="#" class="dialogue-card">
+									<div class="card-icons">
+										<div class="avatar"><img src="https://www.thispersondoesnotexist.com/" alt="" class="img"></div>
+										<div class="unread-info"></div>
+									</div>
+									<div class="dialogue-data"><h3>Тестовый клиент</h3><span>Сообщение</span></div>
+									<div class="time js-time"></div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+
+				<div class="chat-messenger">
+					<div class="messenger-header">
+						<div class="text">
+							<h3>{{ info.ticket_username }}</h3>
+						</div>
+						<div class="functions">
+							<div class="function"><a href="#"><img src="data:image/svg+xml,%3Csvg%20width%3D%2211%22%20height%3D%2216%22%20viewBox%3D%220%200%2011%2016%22%20fill%3D%22none%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%0A%3Cpath%20d%3D%22M0.200012%209.95083C0.200012%2010.2253%200.28634%2010.4467%200.458997%2010.6149C0.631653%2010.7831%200.861861%2010.8672%201.14962%2010.8672H4.5297V13.8157C4.5297%2014.0503%204.55184%2014.2717%204.59611%2014.4797C4.6448%2014.6922%204.70014%2014.8804%204.76212%2015.0442C4.82853%2015.2124%204.89272%2015.3452%204.9547%2015.4426C5.02111%2015.54%205.07645%2015.5887%205.12072%2015.5887C5.16056%2015.5887%205.21368%2015.54%205.28009%2015.4426C5.3465%2015.3452%205.4129%2015.2124%205.47931%2015.0442C5.54572%2014.8804%205.60105%2014.6922%205.64533%2014.4797C5.6896%2014.2717%205.71173%2014.0503%205.71173%2013.8157V10.8672H9.09181C9.37957%2010.8672%209.60978%2010.7831%209.78243%2010.6149C9.95509%2010.4467%2010.0414%2010.2253%2010.0414%209.95083C10.0414%209.50369%209.92853%209.0632%209.70275%208.62935C9.47697%208.19106%209.15158%207.79263%208.72658%207.43403C8.30158%207.07544%207.79467%206.78547%207.20587%206.56411L7.00001%203.66216C7.46043%203.40096%207.86772%203.13312%208.22189%202.85864C8.57605%202.58416%208.83283%202.34067%208.9922%202.12817C9.16043%201.91567%209.24454%201.70317%209.24454%201.49067C9.24454%201.29588%209.17371%201.13208%209.03204%200.999268C8.8948%200.866455%208.71108%200.800049%208.48087%200.800049H1.75392C1.52371%200.800049%201.33777%200.866455%201.19611%200.999268C1.05887%201.13208%200.990247%201.29588%200.990247%201.49067C0.990247%201.70317%201.07436%201.91567%201.24259%202.12817C1.40639%202.34067%201.66316%202.58416%202.0129%202.85864C2.36707%203.13312%202.77879%203.40096%203.24806%203.66216L3.0422%206.56411C2.44897%206.78547%201.93986%207.07544%201.51486%207.43403C1.08986%207.79263%200.764465%208.19106%200.538684%208.62935C0.312903%209.0632%200.200012%209.50369%200.200012%209.95083Z%22%20fill%3D%22%23FFB117%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img"></a></div>
+							<div class="function"><a href="#"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2230%22%20height%3D%2230%22%20viewBox%3D%220%200%2030%2030%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%200h30v30H0z%22%20opacity%3D%22.5%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%238865F7%22%20d%3D%22M24.91%2020.942l-.1-.3c-.235-.7-1.008-1.432-1.718-1.624l-2.628-.718c-.712-.194-1.729.066-2.25.588l-.95.951a10.088%2010.088%200%200%201-7.1-7.1l.951-.952c.522-.521.782-1.537.589-2.25l-.717-2.629c-.194-.711-.926-1.484-1.625-1.717l-.3-.101c-.701-.233-1.7.003-2.222.524L5.418%207.038c-.255.253-.417.976-.417.979A16.805%2016.805%200%200%200%209.917%2020.08%2016.804%2016.804%200%200%200%2021.942%2025c.023%200%20.767-.16%201.022-.412l1.422-1.423c.521-.521.757-1.521.524-2.222z%22%2F%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img"></a></div>
+							<div class="function"><a href="#"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2218%22%20height%3D%2218%22%20viewBox%3D%220%200%2018%2018%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%3E%0A%20%20%20%20%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Cg%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20d%3D%22M0%200L18%200%2018%2018%200%2018z%22%20transform%3D%22translate%28-94%20-1010%29%20translate%2894%201010%29%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%230076D1%22%20fill-rule%3D%22nonzero%22%20d%3D%22M12.955%2012.277c.298.297.78.297%201.077%200l2.744-2.74c.299-.297.299-.777%200-1.075l-2.744-2.739c-.298-.297-.78-.297-1.077%200-.299.298-.299.778%200%201.076l1.437%201.442H7.764c-.42%200-.764.343-.764.763s.344.763.764.763h6.628L12.955%2011.2c-.299.298-.29.786%200%201.076z%22%20transform%3D%22translate%28-94%20-1010%29%20translate%2894%201010%29%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%22%230076D1%22%20fill-rule%3D%22nonzero%22%20d%3D%22M8.4%201H2.6C1.712%201%201%201.7%201%202.556v1.296c0%20.428.36.778.8.778.44%200%20.8-.35.8-.778v-.519c0-.427.36-.777.8-.777h4.2c.44%200%20.8.35.8.777v11.334c0%20.427-.36.777-.8.777H3.4c-.44%200-.8-.35-.8-.777v-.519c0-.428-.36-.778-.8-.778-.44%200-.8.35-.8.778v1.296C1%2016.3%201.72%2017%202.6%2017h5.8c.88%200%201.6-.7%201.6-1.556V2.556C10%201.7%209.28%201%208.4%201z%22%20transform%3D%22translate%28-94%20-1010%29%20translate%2894%201010%29%20matrix%28-1%200%200%201%2011%200%29%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img"></a></div>
+						</div>
+					</div>
+					<div class="messages">
+						<div class="day-block">
+							<div class="data">
+								<span>14 January 2024</span>
+								<hr />
+							</div>
+
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>{{ info.ticket_username }}</h4>
+										<span class="">{{ formatDate(m.createdAt) }}</span>
+									</div>
+									<div class="message-text">
+										<span>{{ m.text }}</span>
+									</div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text">
+										<span>Hi!~~ help me</span>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									</div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text">
+										<span>Hi!~~ help me</span>
+									</div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words 👋 👋</span></div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text">
+										<span>Hi!~~ help me</span>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									</div>
+								</div>
+							</div>
+						</div>
+
+						<div class="day-block">
+							<div class="data">
+								<span>18 January 2024</span>
+								<hr />
+							</div>
+
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words 👋 👋</span></div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>Hi!~~ help me</span></div>
+									<div class="message-text"><span>big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words big multiline message with more chars and words. and worda and words and words and words and words and words and words and words and words and words and words and words 👋 👋</span></div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text">
+										<span>Hi!~~ help me 👋</span>
+									</div>
+								</div>
+							</div>
+							<div class="message online">
+								<div class="avatar">
+									<img class="img" src="https://www.thispersondoesnotexist.com/" alt="" />
+									<div class="online-info"></div>
+								</div>
+								<div class="text">
+									<div class="message-header">
+										<h4>Тестовый клиент</h4>
+										<span class="js-time"></span>
+									</div>
+									<div class="message-text">
+										<span>Hi!~~ help me</span>
+									</div>
+								</div>
+							</div>
+
+						</div>
+
+					</div>
+
+
+					<form class="input-message">
+						<textarea required placeholder="Enter your message" > </textarea>
+						<div class="input-message-bottom-menu">
+							<button type="submit" class="send-icon">
+									<svg class="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" aria-hidden="true" class="h-icon-sm w-icon-sm text-fill-primary-default">
+										<path d="M3.478 2.405a.75.75 0 00-.926.94l2.432 7.905H13.5a.75.75 0 010 1.5H4.984l-2.432 7.905a.75.75 0 00.926.94 60.519 60.519 0 0018.445-8.986.75.75 0 000-1.218A60.517 60.517 0 003.478 2.405z"></path>
+									</svg>
+							</button>
+						</div>
+					</form>
+
+				</div>
+				<div class="chat-description" id="chat-description">
+			<button class="close-button" id="close-button" onclick="document.getElementById('chat-description').style.display='none'"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(2%202)%22%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFF%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212.75%22%20stroke%3D%22%23222D38%22%20stroke-width%3D%221.5%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22%23222D38%22%20opacity%3D%221%22%20transform%3D%22translate(6%206)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22rotate(45%206.24%206.01)%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22scale(-1%201)%20rotate(45%200%20-9.058)%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img"></button>
+					<h4>User information</h4>
+					<ul class="subdescription">
+						<li class="chat-description-item">
+							<div class="chat-description-card">
+								<div class="text online">
+									<div class="avatar">
+										<img src="https://www.thispersondoesnotexist.com/" alt="" class="img">
+										<div class="online-info"></div>
+									</div>
+									<textarea>{{ info.ticket_username }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=85467&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.ticket_email }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=9659&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.ticket_phone }}</textarea>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<h4>Card information</h4>
+					<ul class="subdescription">
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=kuzF9jfzqSmJ&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ formatCard(info.cardnumber) }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=kuzF9jfzqSmJ&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.validity }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=kuzF9jfzqSmJ&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.cvv }}</textarea>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+					<h4>System information</h4>
+					<ul class="subdescription">
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=11410&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.device }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=1490&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.ip }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=2586&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.os }}</textarea>
+								</div>
+							</div>
+						</li>
+						<li class="chat-description-item">
+							<div href="" class="chat-description-card">
+								<div class="icon"><img src="https://img.icons8.com/?size=100&id=53372&format=png&color=000000" alt="" class="img"></div>
+								<div class="text online">
+									<textarea>{{ info.browser }}</textarea>
+								</div>
+							</div>
+						</li>
+					</ul>
+
+				</div>
+			</section>
+		</div>
+
+		<script>
+			let init = () => {
+				let d = new Date();
+				Array.from(document.getElementsByClassName("js-time")).forEach(element=>{
+					element.textContent=`${d.getHours()}:${d.getMinutes()}`
+				})
+			}
+			init()
+		</script>
+	</body>
+</html>

